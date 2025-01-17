@@ -1,7 +1,9 @@
 # ci_cd_sentiments_analysis
+
+## 📖 Overview
 This project sets up an automated CI/CD pipeline to test a sentiment analysis API. The goal is to ensure the proper functioning of the API through unit and integration tests, executed via Docker containers orchestrated by Docker Compose.
 
-##API Description
+## API Description
 The sentiment analysis API provides the following endpoints:
 
   - /status: Checks the proper functioning of the API.
@@ -63,11 +65,10 @@ The project uses Docker Compose to orchestrate the running of the API and tests 
 ## 📄 Files
 This project contains the following files:
 
- - docker-compose.yml: Defines the services for the API and the three test containers (authentication, authorization, content).
- - setup.sh: A shell script to build and start the containers.
- - Dockerfiles: Custom Dockerfiles for each test container.
- - log.txt: A file where the results of the tests are logged.
- - remarks.txt: A file for any additional notes or remarks.
+ - **docker-compose.yml**: Defines the services for the API and the three test containers (authentication, authorization, content).
+ - **setup.sh**: A shell script to build and start the containers.
+ - **Dockerfiles**: Custom Dockerfiles for each test container.
+ - **log.txt**: A file where the results of the tests are logged.
 
 ## 👨‍💻 Running Tests
 
