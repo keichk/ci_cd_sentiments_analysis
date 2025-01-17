@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  api:
+    image: datascientest/fastapi:1.0.0
+    container_name: fastapi
+    ports:
+      - "8000:8000"
+    networks:
+      - ci_cd_network
+
+  auth:
+    build: 
+      context: ./auth
+      dockerfile: Dockerfile.auth
+    environment:
+      - LOG=1
+    volumes:
+      - ./test/log.txt
+    networks:
+      - ci_cd_network
+    depends_on:
+      - api
+
+  authz:
+    build: 
+      context: ./authorization
+      dockerfile: Dockerfile.authorization
+    environment:
+      - LOG=1
+    volumes:
+      - ./test/log.txt
+    networks:
+      - ci_cd_network
+    depends_on:
+      - api
+  
+  content:
+    build: 
+      context: ./content
+      dockerfile: Dockerfile.content
+    environment:
+      - LOG=1
+    volumes:
+      - ./test/log.txt
+    networks:
+      - ci_cd_network
+    depends_on:
+      - api
+
+networks:
+  ci_cd_network:
+    driver: bridge
