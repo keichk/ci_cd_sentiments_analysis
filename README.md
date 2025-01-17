@@ -21,8 +21,8 @@ The sentiment analysis API provides the following endpoints:
 
 ### Installation
 1. **Clone the project**
-git clone `https://github.com/keichk/ci_cd_sentiments_analysis.git`
 
+git clone `https://github.com/keichk/ci_cd_sentiments_analysis.git`
 cd ci_cd_sentiment_analysis
 
 3. **Build the containers**
