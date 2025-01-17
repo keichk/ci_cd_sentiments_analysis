@@ -22,15 +22,16 @@ The sentiment analysis API provides the following endpoints:
 ### Installation
 1. **Clone the project**
 git clone `https://github.com/keichk/ci_cd_sentiments_analysis.git`
+
 cd ci_cd_sentiment_analysis
 
-2. **Build the containers**
+3. **Build the containers**
     ```bash
       ./setup.sh
-3. **Start the containers**
+4. **Start the containers**
     ```bash
       docker-compose up -d
-4. **View the logs The results of the tests will be written to log.txt.**
+5. **View the logs The results of the tests will be written to log.txt.**
    
 ---
 
