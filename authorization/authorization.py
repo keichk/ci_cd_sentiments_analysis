@@ -57,7 +57,7 @@ for case in test_case:
     ))
 
     # impression dans un fichier
-    if os.environ.get('LOG') == 0:
+    if os.environ.get('LOG') == 1:
         with open('log.txt', 'a') as file:
             file.write(output.format(username=case['username'], 
                                      status_code=status_code,
